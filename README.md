@@ -14,10 +14,6 @@ Tech Stack: <br><br>
 ![Firebase](https://img.shields.io/badge/FIREBASE-yellow?style=for-the-badge&logoColor=gray)
 ![Flask](https://img.shields.io/badge/FLASK-white?style=for-the-badge&logoColor=black)
 
-# Tailwind Starter Project
-
-This repository serves as a simple starter project for setting up a Tailwind CSS project. It provides basic configurations and setup instructions to help you kickstart your development process.
-
 ## Getting Started
 
 Follow these steps to set up the project on your local machine.

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/dist/output.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Added Font Awesome for icons -->
+  <style>
+    /* Additional styles */
+    .box-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
+    .box-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+    .box-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .box-subtext {
+      font-size: 14px;
+    }
+    .box {
+      background-color: #EDF2F7; /* Added solid color */
+      transition: transform 0.3s ease; /* Added smooth transition */
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    .arrow-icon {
+      color: #4CAF50; /* Arrow icon color */
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Green navbar -->
+  <nav class="bg-white py-4 shadow-md" style="--shadow-color: rgba(5, 11, 5, 0.5);">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <img src="../static/images/logo.png" alt="Logo" class="h-8">
+        <ul class="flex justify-center space-x-10"> <!-- Updated -->
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Groups</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Classes</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Tests</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Assignments</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Hello, Student</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Centered heading -->
+  <section class="text-green-600 body-font bg-green-100 mt-8">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <div class="text-center"><h2 class="text-3xl font-serif text-green-950">Spanish</h2></div>
+        <p class="mx-auto text-base text-lime-900">Your Materials</p>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-green-800 border p-4 rounded-t-md box">
+            <div class="box-container">
+              <i class="box-icon fas fa-video"></i>
+              <h2 class="box-title">Videos</h2>
+              <p class="box-subtext">Watch video lectures</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-green-800 border p-4 rounded-t-md box">
+            <div class="box-container">
+              <i class="box-icon fas fa-book"></i>
+              <h2 class="box-title">Notes</h2>
+              <p class="box-subtext">Verbs</p>
+              <p class="box-subtext">Gender</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-green-800 border p-4 rounded-t-md box">
+            <div class="box-container">
+              <i class="box-icon fas fa-scroll"></i>
+              <h2 class="box-title">Flashcards</h2>
+              <p class="box-subtext">Revise with flashcards</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-green-800 border p-4 rounded-t-md box">
+            <div class="box-container">
+              <i class="box-icon fas fa-poll"></i>
+              <h2 class="box-title">Polls</h2>
+              <p class="box-subtext">2 New Polls</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-green-800 border p-4 rounded-t-md box">
+            <div class="box-container">
+              <i class="box-icon fas fa-question-circle"></i>
+              <h2 class="box-title">Doubts</h2>
+              <p class="box-subtext">36 Unseen</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-gray-600 body-font bg-green-600 pt-6 mt-80">
+    <div class="container px-5 py-6 mx-auto flex items-justify sm:flex-row flex-col">
+      <p class="text-sm text-gray-100 sm:ml-auto sm:mt-0 ">© 2024 by ByteBasilisks
+      </p>
+      <p class="text-sm text-gray-100 sm:ml-auto sm:mt-0 ">
+        <a href="mailto:classify@yahoo.com" class="text-gray-100 ml-1">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

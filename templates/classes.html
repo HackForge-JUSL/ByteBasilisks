@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/dist/output.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Added Font Awesome for icons -->
+  <style>
+    /* Additional styles */
+    .box-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
+    .box-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+    .box-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .box-subtext {
+      font-size: 14px;
+    }
+    .box {
+      background-color: #ffffff; /* Changed to white */
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+      transition: transform 0.3s ease; /* Added smooth transition */
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    .arrow-icon {
+      color: #4CAF50; /* Arrow icon color */
+      font-size: 24px;
+    }
+    .arrow-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Green navbar -->
+  <nav class="bg-white py-4 shadow-md" style="--shadow-color: rgba(5, 11, 5, 0.5);">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <img src="../static/images/logo.png" alt="Logo" class="h-8">
+        <ul class="flex justify-center space-x-10"> <!-- Updated -->
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Groups</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Classes</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Tests</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Assignments</a></li>
+            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Hello, Student</a></li>
+        </ul>
+    </div>
+  </nav>
+  
+  <!-- Navigation buttons -->
+  <div class="flex justify-center mt-8">
+    <button class="arrow-btn"><i class="arrow-icon fas fa-arrow-left"></i></button>
+    <h2 class="text-3xl font-normal text-green-400 mx-6">Exams</h2>
+    <button class="arrow-btn"><i class="arrow-icon fas fa-arrow-right"></i></button>
+  </div>
+
+  <!-- Centered heading -->
+  <section class="text-green-600 body-font">
+    <div class="container px-5 py-3 mx-auto">
+      <div class="flex flex-wrap -m-4 items-center">
+        <!-- First square -->
+        <div class="p-4 md:w-10/12">
+          <div class="h-full bg-green-200 py-8 px-8 rounded-l-md overflow-hidden text-center relative">
+            <p class="title-font sm:text-l text-xl font-medium text-green-900">
+              Mathematics CT- 2
+            </p>
+            <p class="box-subtext">Duration: 2 hours</p> <!-- Added score information -->
+          </div>
+        </div>
+        <!-- Second square -->
+        <div class="p-4 md:w-10/12">
+          <div class="h-full bg-green-200 py-8 px-8 rounded-l-md overflow-hidden text-center relative">
+            <p class="title-font sm:text-l text-xl font-medium text-green-900">
+              Physics-CT 1
+            </p>
+            <p class="box-subtext">Duration: 2 hours</p> <!-- Added duration information -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Past exams-->
+  <div class="text-left ml-40 mr-auto mt-10"><h2 class="text-3xl font-normal text-green-400">Past Exams</h2></div>
+
+  <!-- Centered heading -->
+  <section class="text-green-600 body-font">
+    <div class="container px-5 py-3 mx-auto">
+      <div class="flex flex-wrap -m-4 items-center">
+        <!-- First square -->
+        <div class="p-4 md:w-10/12">
+          <div class="h-full bg-green-200 py-8 px-8 rounded-l-md overflow-hidden text-center relative">
+            <p class="title-font sm:text-l text-xl font-medium text-green-900">
+              Mathematics CT- 1
+            </p>
+            <p class="box-subtext">Score: 75%</p> <!-- Added score information -->
+          </div>
+        </div>
+        <!-- Second square -->
+        <div class="p-4 md:w-10/12">
+          <div class="h-full bg-green-200 py-8 px-8 rounded-l-md overflow-hidden text-center relative">
+            <p class="title-font sm:text-l text-xl font-medium text-green-900">
+              Chemistry- CT1
+            </p>
+            <p class="box-subtext">Score: 90%</p> <!-- Added score information -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-gray-600 body-font bg-green-600 pt-6 mt-80">
+    <div class="container px-5 py-6 mx-auto flex items-justify sm:flex-row flex-col">
+      <p class="text-sm text-gray-100 sm:ml-auto sm:mt-0 ">© 2024 by ByteBasilisks
+      </p>
+      <p class="text-sm text-gray-100 sm:ml-auto sm:mt-0 ">
+        <a href="mailto:classify@yahoo.com" class="text-gray-100 ml-1">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+

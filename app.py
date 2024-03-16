@@ -52,8 +52,8 @@ def assignments():
     return render_template('assignments.html')
 
 @app.route('/class-tests')
-def class_tests():
-    return render_template('class_tests.html')
+def tests():
+    return render_template('tests.html')
 
 @app.route('/groups')
 def groups():

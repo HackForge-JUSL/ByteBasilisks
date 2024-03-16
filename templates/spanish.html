@@ -47,9 +47,9 @@
         <!-- Logo -->
         <img src="../static/images/logo.png" alt="Logo" class="h-8">
         <ul class="flex justify-center space-x-10"> <!-- Updated -->
-            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Groups</a></li>
+            <li class="pt-4"><a href="{{ url_for('groups')}}" class="text-green-800 hover:text-green-600 transition-colors duration-300">Groups</a></li>
             <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Classes</a></li>
-            <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Tests</a></li>
+            <li class="pt-4"><a href="{{ url_for('tests')}}" class="text-green-800 hover:text-green-600 transition-colors duration-300">Tests</a></li>
             <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Assignments</a></li>
             <li class="pt-4"><a href="#" class="text-green-800 hover:text-green-600 transition-colors duration-300">Hello, Student</a></li>
         </ul>

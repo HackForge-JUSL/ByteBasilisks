@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/dist/output.css">
+  <style>
+    .rounded-custom {
+      border-radius: 50px;
+    }
+    .underline {
+    text-decoration: underline;
+  }
+  </style>
+
+</head>
+<body>
+  <!-- Green navbar -->
+  <nav class="bg-green-500 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <img src="../static/images/logo.png" alt="Logo" class="h-8">
+    </div>
+  </nav>
+
+  <!-- Centered heading -->
+  <div class="text-center mt-10">
+    <h1 class="text-5xl font-bold underline text-green-600">CLASSify</h1>
+  </div>
+  <!--Copied from Classify-Frontend-->
+  <section class="bg-gray-200 min-h-screen flex justify-center items-center ">
+    <!-- login container -->
+    <div class="bg-green-700 flex rounded-custom shadow-lg max-w-xl  items-center">
+      <!-- form -->
+      <div class="md:w-1/2 px-4 md:px-6">
+        <h2 class="font-serif text-xl text-center text-green-200 underline">Login</h2>
+        <!-- Toggle button for switching between student and faculty -->
+        <div class="flex justify-between mt-4">
+          <button id="studentBtn" class="pt-1 pb-1 px-6 bg-white rounded-s border border-solid border-pink-500 focus:bg-slate-200 hover:scale-y-75 hover:scale-x-90 hover:rotate-3  duration-300">Student</button>
+          <button id="facultyBtn" class="pt-1 pb-1 px-6 bg-white rounded-s border border-solid border-pink-500 focus:bg-slate-200 hover:scale-y-75 hover:scale-x-90 hover:rotate-3 duration-300">Faculty</button>
+        </div>
+  
+        <!-- Student login form -->
+        <form id="studentLogin" action="" class="flex flex-col gap-4">
+          <input class="p-2 mt-8 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="email" name="email" placeholder="Email">
+          <div class="relative">
+            <input class="p-2 mb-3 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="password" name="password" placeholder="Password">
+        
+          </div>
+          <button class="bg-lime-400 rounded-xl text-slate-800  p-2 hover:scale-x-90 hover:border-x-white hover:mix-blend-color-burn">Login</button>
+        </form>
+  
+        <!-- Faculty login form -->
+        <form id="facultyLogin" action="" class="flex flex-col gap-4 hidden ">
+          <input class="p-2 mt-8 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="email" name="email" placeholder="Email">
+          <div class="relative">
+            <input class="p-2 mb-3 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="password" name="password" placeholder="Password">
+        
+          </div>
+          <button class="bg-lime-400 rounded-xl text-slate-800  p-2 hover:scale-x-90 hover:border-x-white hover:mix-blend-color-burn">Login</button>
+        </form>
+  
+        <!-- Register button -->
+        <div class="mt-4 flex justify-between ">
+          <button class="bg-lime-400 rounded-xl text-slate-800  p-5 align-baseline hover:scale-90 hover:border-x-white hover:mix-blend-color-burn">Register</button>
+        </div>
+      </div>
+  
+      <!-- image -->
+      <div class="md:block hidden w-1/2 ">
+        <img class="rounded-custom" src="../static/images/login.jpg">
+      </div>
+    </div>
+  </section>
+  
+  <script>
+// JavaScript for switching between student and faculty login forms
+  const studentBtn = document.getElementById('studentBtn');
+  const facultyBtn = document.getElementById('facultyBtn');
+  const studentLogin = document.getElementById('studentLogin');
+  const facultyLogin = document.getElementById('facultyLogin');
+
+  studentBtn.addEventListener('click', () => {
+    studentLogin.classList.remove('hidden');
+    facultyLogin.classList.add('hidden');
+  });
+
+  facultyBtn.addEventListener('click', () => {
+    studentLogin.classList.add('hidden');
+    facultyLogin.classList.remove('hidden');
+  });
+
+  // Redirect to home.html after successful login
+  const loginButtons = document.querySelectorAll('form button');
+
+  loginButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Simulating successful login, you may add actual login validation here
+      const loggedIn = true; // Change to true if login is successful
+
+      if (loggedIn) {
+        // Redirect to home.html
+        window.location.href = 'index.html';
+      }
+    });
+  });
+</script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+
+
+  <footer class="text-gray-600 body-font bg-green-600 pt-6 mt-80">
+    <div class="container px-5 py-6 mx-auto flex items-justify sm:flex-row flex-col">
+      <p class="text-sm text-gray-100 sm:ml-auto sm:mt-0 ">© 2024 by ByteBasilisks
+      </p>
+      <p class="text-sm text-gray-100 sm:ml-auto sm:mt-0 ">
+        <a href="mailto:classify@yahoo.com" class="text-gray-100 ml-1">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+</body>
+</html>
+
+

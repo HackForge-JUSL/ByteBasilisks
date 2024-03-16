@@ -14,14 +14,6 @@ Tech Stack: <br><br>
 ![Firebase](https://img.shields.io/badge/FIREBASE-yellow?style=for-the-badge&logoColor=gray)
 ![Flask](https://img.shields.io/badge/FLASK-white?style=for-the-badge&logoColor=black)
 
-## Getting Started
-
-Follow these steps to set up the project on your local machine.
-
-### Prerequisites
-
-Before you begin, ensure you have Node.js and npm installed on your system.
-
 ### Installation
 
 1. Clone this repository to your local machine or download it as a ZIP file and extract it.

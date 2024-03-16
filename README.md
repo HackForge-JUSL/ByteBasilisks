@@ -49,6 +49,6 @@ Before you begin, ensure you have Node.js and npm installed on your system.
 ### Configuration
 
 ```
-npm run watch
+npm run build
 ```
 

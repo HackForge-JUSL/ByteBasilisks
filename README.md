@@ -14,3 +14,45 @@ Tech Stack: <br><br>
 ![Firebase](https://img.shields.io/badge/FIREBASE-yellow?style=for-the-badge&logoColor=gray)
 ![Flask](https://img.shields.io/badge/FLASK-white?style=for-the-badge&logoColor=black)
 
+# Tailwind Starter Project
+
+This repository serves as a simple starter project for setting up a Tailwind CSS project. It provides basic configurations and setup instructions to help you kickstart your development process.
+
+## Getting Started
+
+Follow these steps to set up the project on your local machine.
+
+### Prerequisites
+
+Before you begin, ensure you have Node.js and npm installed on your system.
+
+### Installation
+
+1. Clone this repository to your local machine or download it as a ZIP file and extract it.
+
+2. Navigate to the project directory in your terminal.
+
+3. Run the following command to initialize npm and create a `package.json` file:
+
+    ```
+    npm init -y
+    ```
+
+4. Install Tailwind CSS as a development dependency by running the following command:
+
+    ```
+    npm install -D tailwindcss
+    ```
+
+5. Create a `tailwind.config.js` file by running the following command:
+
+    ```
+    npx tailwindcss init
+    ```
+
+### Configuration
+
+```
+npm run watch
+```
+

@@ -13,7 +13,7 @@ Tech Stack: <br><br>
 ![node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Firebase](https://img.shields.io/badge/FIREBASE-yellow?style=for-the-badge&logoColor=gray)
 ![Flask](https://img.shields.io/badge/FLASK-white?style=for-the-badge&logoColor=black)
-
+---
 ### Installation
 
 1. Clone this repository to your local machine or download it as a ZIP file and extract it.

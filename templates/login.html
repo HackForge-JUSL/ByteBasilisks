@@ -14,26 +14,27 @@
   </style>
 
 </head>
-<body>
+<body class="font-mono">
   <!-- Green navbar -->
-  <nav class="bg-green-500 py-4">
+  <nav class="bg-white py-4 px-2 shadow-lg">
     <div class="container mx-auto flex justify-between items-center">
       <!-- Logo -->
-      <img src="../static/images/logo.png" alt="Logo" class="h-8 justify-end">
+      <img src="../static/images/logo.png" alt="Logo" class="max-h-12 justify-end" >
     </div>
   </nav>
 
-  <!-- Centered heading -->
-  <div class="text-center mt-10">
-    <h1 class="text-5xl font-bold underline text-green-600">CLASSify</h1>
+  <div class="flex justify-center pt-10">
+    {% if error %}
+        <span>{{ error }}</span>
+    {% endif %}
   </div>
   <!--Copied from Classify-Frontend-->
-  <section class="bg-gray-200 min-h-screen flex justify-center items-center ">
+  <section class="bg-white min-h-screen flex justify-center items-center ">
     <!-- login container -->
-    <div class="bg-green-700 flex rounded-custom shadow-lg max-w-xl  items-center">
+    <div class="bg-green-700 flex rounded-custom shadow-lg max-w-xl items-center">
       <!-- form -->
       <div class="md:w-1/2 px-4 md:px-6">
-        <h2 class="font-serif text-xl text-center text-green-200 underline">Login</h2>
+        <h2 class="font-serif text-xl text-center text-green-100 ">LOGIN</h2>
         <!-- Toggle button for switching between student and faculty -->
         <div class="flex justify-between mt-4">
           <button id="studentBtn" class="pt-1 pb-1 px-6 bg-white rounded-s border border-solid border-pink-500 focus:bg-slate-200 hover:scale-y-75 hover:scale-x-90 hover:rotate-3  duration-300">Student</button>
@@ -41,28 +42,27 @@
         </div>
   
         <!-- Student login form -->
-        <form id="studentLogin" action="" class="flex flex-col gap-4">
-          <input class="p-2 mt-8 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="email" name="email" placeholder="Email">
+        <form id="studentLogin" method="post" action="/login" class="flex flex-col gap-4">
+          <input class="p-2 mt-8 rounded-xl border-gray-50 hover:border-x-white" type="email" name="email" placeholder="Email">
           <div class="relative">
-            <input class="p-2 mb-3 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="password" name="password" placeholder="Password">
-        
+            <input class="p-2 mb-3 rounded-xl border-gray-50 hover:border-x-white" type="password" name="password" placeholder="Password">
           </div>
           <button class="bg-lime-400 rounded-xl text-slate-800  p-2 hover:scale-x-90 hover:border-x-white hover:mix-blend-color-burn">Login</button>
         </form>
   
         <!-- Faculty login form -->
-        <form id="facultyLogin" action="" class="flex flex-col gap-4 hidden ">
-          <input class="p-2 mt-8 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="email" name="email" placeholder="Email">
+        <form id="facultyLogin" method="post" action="/login" class="flex flex-col gap-4 hidden">
+          <input class="p-2 mt-8 rounded-xl border-gray-50 hover:border-x-white" type="email" name="email" placeholder="Email">
           <div class="relative">
-            <input class="p-2 mb-3 rounded-xl border-gray-50  hover:scale-x-90 hover:border-x-white" type="password" name="password" placeholder="Password">
+            <input class="p-2 mb-3 rounded-xl border-gray-50 hover:border-x-white" type="password" name="password" placeholder="Password">
         
           </div>
           <button class="bg-lime-400 rounded-xl text-slate-800  p-2 hover:scale-x-90 hover:border-x-white hover:mix-blend-color-burn">Login</button>
         </form>
   
         <!-- Register button -->
-        <div class="mt-4 flex justify-between ">
-          <button class="bg-lime-400 rounded-xl text-slate-800  p-5 align-baseline hover:scale-90 hover:border-x-white hover:mix-blend-color-burn">Register</button>
+        <div class="mt-4 flex justify-evenly ">
+          <button class="bg-lime-400 rounded-xl text-slate-800 align-baseline p-4 hover:scale-90 hover:border-x-white hover:mix-blend-color-burn">Register</button>
         </div>
       </div>
   
@@ -83,6 +83,7 @@
   studentBtn.addEventListener('click', () => {
     studentLogin.classList.remove('hidden');
     facultyLogin.classList.add('hidden');
+    
   });
 
   facultyBtn.addEventListener('click', () => {

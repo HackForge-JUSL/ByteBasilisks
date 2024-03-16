@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/dist/output.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Added Font Awesome for icons -->
   <style>
     /* Additional styles */
     .box-container {
@@ -26,8 +27,16 @@
     .box-subtext {
       font-size: 14px;
     }
+    .box {
+      background-color: #EDF2F7; /* Added solid color */
+      transition: transform 0.3s ease; /* Added smooth transition */
+    }
     .box:hover {
       transform: translateY(-5px);
+    }
+    .arrow-icon {
+      color: #4CAF50; /* Arrow icon color */
+      font-size: 24px;
     }
   </style>
 </head>
@@ -61,6 +70,7 @@
               <i class="box-icon fas fa-video"></i>
               <h2 class="box-title">Videos</h2>
               <p class="box-subtext">Watch video lectures</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
             </div>
           </div>
         </div>
@@ -71,7 +81,7 @@
               <h2 class="box-title">Notes</h2>
               <p class="box-subtext">Mechanics-I</p>
               <p class="box-subtext">Electricity-I</p>
-              
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
             </div>
           </div>
         </div>
@@ -81,6 +91,7 @@
               <i class="box-icon fas fa-scroll"></i>
               <h2 class="box-title">Flashcards</h2>
               <p class="box-subtext">Revise with flashcards</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
             </div>
           </div>
         </div>
@@ -90,6 +101,7 @@
               <i class="box-icon fas fa-poll"></i>
               <h2 class="box-title">Polls</h2>
               <p class="box-subtext">2 New Polls</p>
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
             </div>
           </div>
         </div>
@@ -99,7 +111,7 @@
               <i class="box-icon fas fa-question-circle"></i>
               <h2 class="box-title">Doubts</h2>
               <p class="box-subtext">36 Unseen</p>
-              
+              <i class="arrow-icon fas fa-arrow-right"></i> <!-- Added arrow icon -->
             </div>
           </div>
         </div>

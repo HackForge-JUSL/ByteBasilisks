@@ -4,6 +4,21 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///users.db'
+db=SQLAlchemy(app)
+class user(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    username=db.Column(db.String(80),unique=True,nullable=False)
+    password_hash=db.Column(db.String(128), nullable = False)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_passwords(self, password):
+        return check_password_hash(self.password_hash, password)
+
+    def __repr__(self):
+        return f'<User {self.username}>'
 
 # Dummy user credentials (replace with your actual user database)
 users = {
@@ -14,6 +29,27 @@ users = {
 @app.route('/')
 def home():
     return render_template('login.html')
+
+@app.route('/register', methods = ['GET','POST'])
+def register():
+    if request.method == 'GET':
+        return render_template('register.html')
+    else:
+        username = request.form['username']
+        password = request.form['password']
+        
+        existing_user = user.query.filter_by(username=username).first()
+        if existing_user:
+            error = 'User already exists'
+            return render_template('login.html', error=error)
+        
+        new_user = user(username=username)
+        new_user.set_password(password)
+
+        db.session.add(new_user)
+        db.session.commit()
+
+        return redirect(url_for('login'))
 
 @app.route('/login', methods=['POST'])
 def login():

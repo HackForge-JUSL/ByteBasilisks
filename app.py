@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 
 app = Flask(__name__)
+'''
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///users.db'
 db=SQLAlchemy(app)
 class user(db.Model):
@@ -19,13 +20,13 @@ class user(db.Model):
 
     def __repr__(self):
         return f'<User {self.username}>'
+'''
 
-# Dummy user credentials (replace with your actual user database)
 users = {
     'user1@example.com': 'password1',
     'user2@example.com': 'password2'
 }
-
+'''
 @app.route('/')
 def home():
     return render_template('login.html')
@@ -50,6 +51,7 @@ def register():
         db.session.commit()
 
         return redirect(url_for('login'))
+'''
 
 @app.route('/login', methods=['POST'])
 def login():
